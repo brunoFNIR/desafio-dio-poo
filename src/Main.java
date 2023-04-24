@@ -1,31 +1,28 @@
-import br.com.dio.desafio.dominio.Bootcamp;
-import br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.dominio.Dev;
-import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Curso curso1 = new Curso();
+        Conteudo curso1 = new Curso();
         curso1.setTitulo("Java");
         curso1.setDescricao("descrição curso java");
-        curso1.setCargaHoraria(8);
+        ((Curso) curso1).setCargaHoraria(8);
 
-        Curso curso2 = new Curso();
+        Conteudo curso2 = new Curso();
         curso2.setTitulo("JS");
         curso2.setDescricao("descrição curso js");
-        curso2.setCargaHoraria(4);
+        ((Curso) curso2).setCargaHoraria(4);
 
-        Mentoria mentoria1 = new Mentoria();
+        Conteudo mentoria1 = new Mentoria();
         mentoria1.setTitulo("Mentoria Java");
         mentoria1.setDescricao("descrição mentoria java");
-        mentoria1.setData(LocalDate.now());
+        ((Mentoria) mentoria1).setData(LocalDate.now());
 
-        Mentoria mentoria2 = new Mentoria();
+        Conteudo mentoria2 = new Mentoria();
         mentoria2.setTitulo("Mentoria js");
         mentoria2.setDescricao("descrição mentoria js");
-        mentoria2.setData(LocalDate.now());
+        ((Mentoria) mentoria2).setData(LocalDate.now());
 
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bc1");
